@@ -1,0 +1,14 @@
+../hal/src/sensors.c:46:13:nullFunction	1
+../hal/src/sensors.c:93:6:sensorsInit	2
+../hal/src/sensors.c:114:6:sensorsTest	1
+../hal/src/sensors.c:118:6:sensorsAreCalibrated	1
+../hal/src/sensors.c:122:6:sensorsManufacturingTest	1
+../hal/src/sensors.c:126:6:sensorsAcquire	1
+../hal/src/sensors.c:130:6:sensorsWaitDataReady	1
+../hal/src/sensors.c:134:6:sensorsReadGyro	1
+../hal/src/sensors.c:138:6:sensorsReadAcc	1
+../hal/src/sensors.c:142:6:sensorsReadMag	1
+../hal/src/sensors.c:146:6:sensorsReadBaro	1
+../hal/src/sensors.c:150:6:sensorsSetAccMode	1
+../hal/src/sensors.c:154:28:EXTI1_Callback	1
+../hal/src/sensors.c:158:39:findImplementation	3

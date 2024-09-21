@@ -1,0 +1,10 @@
+../modules/src/estimator/estimator.c:79:6:stateEstimatorInit	24	static
+../modules/src/estimator/estimator.c:84:6:stateEstimatorSwitchTo	24	static
+../modules/src/estimator/estimator.c:119:20:stateEstimatorGetType	4	static
+../modules/src/estimator/estimator.c:123:13:initEstimator	16	static
+../modules/src/estimator/estimator.c:129:13:deinitEstimator	16	static
+../modules/src/estimator/estimator.c:135:6:stateEstimatorTest	8	static
+../modules/src/estimator/estimator.c:139:6:stateEstimator	16	static
+../modules/src/estimator/estimator.c:143:13:stateEstimatorGetName	4	static
+../modules/src/estimator/estimator.c:148:6:estimatorEnqueue	32	static,ignoring_inline_asm
+../modules/src/estimator/estimator.c:173:6:estimatorDequeue	16	static

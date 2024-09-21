@@ -1,0 +1,4 @@
+../modules/src/worker.c:25:6:workerInit	16	static
+../modules/src/worker.c:34:6:workerTest	4	static
+../modules/src/worker.c:39:6:workerLoop	16	static
+../modules/src/worker.c:55:5:workerSchedule	24	static

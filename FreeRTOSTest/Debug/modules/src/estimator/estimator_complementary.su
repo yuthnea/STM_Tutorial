@@ -1,0 +1,3 @@
+../modules/src/estimator/estimator_complementary.c:53:6:estimatorComplementaryInit	8	static
+../modules/src/estimator/estimator_complementary.c:58:6:estimatorComplementaryTest	16	static
+../modules/src/estimator/estimator_complementary.c:67:6:estimatorComplementary	72	static

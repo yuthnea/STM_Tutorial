@@ -1,0 +1,4 @@
+../vl53l1/core/src/vl53l1_api_calibration.c:70:14:VL53L1_run_ref_spad_char	16
+../vl53l1/core/src/vl53l1_api_calibration.c:256:14:VL53L1_run_offset_calibration	28
+../vl53l1/core/src/vl53l1_api_calibration.c:653:14:VL53L1_run_spad_rate_map	7
+../vl53l1/core/src/vl53l1_api_calibration.c:745:14:VL53L1_run_device_test	10

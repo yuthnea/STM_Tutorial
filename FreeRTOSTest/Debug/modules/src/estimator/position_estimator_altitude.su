@@ -1,0 +1,4 @@
+../modules/src/estimator/position_estimator_altitude.c:62:6:positionEstimate	40	static
+../modules/src/estimator/position_estimator_altitude.c:66:6:positionUpdateVelocity	16	static
+../modules/src/estimator/position_estimator_altitude.c:70:13:positionEstimateInternal	48	static
+../modules/src/estimator/position_estimator_altitude.c:117:13:positionUpdateVelocityInternal	24	static

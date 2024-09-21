@@ -1,0 +1,2 @@
+../modules/src/static_mem.c:37:6:vApplicationGetIdleTaskMemory	24	static
+../modules/src/static_mem.c:55:6:vApplicationGetTimerTaskMemory	24	static

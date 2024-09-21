@@ -1,0 +1,8 @@
+../drivers/src/nvic.c:39:6:nvicInit	4	static
+../drivers/src/nvic.c:49:19:SysTick_Handler	8	static
+../drivers/src/nvic.c:88:19:NMI_Handler	4	static
+../drivers/src/nvic.c:95:19:HardFault_Handler	4	static,ignoring_inline_asm
+../drivers/src/nvic.c:111:19:printHardFault	16	static
+../drivers/src/nvic.c:180:19:BusFault_Handler	4	static
+../drivers/src/nvic.c:194:19:UsageFault_Handler	4	static
+../drivers/src/nvic.c:208:19:DebugMon_Handler	4	static

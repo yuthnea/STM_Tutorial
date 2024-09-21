@@ -1,0 +1,6 @@
+../drivers/src/pmw3901.c:23:13:digitalWrite	16	static
+../drivers/src/pmw3901.c:29:13:registerWrite	16	static
+../drivers/src/pmw3901.c:50:16:registerRead	24	static
+../drivers/src/pmw3901.c:81:13:InitRegisters	8	static
+../drivers/src/pmw3901.c:164:6:pmw3901Init	16	static
+../drivers/src/pmw3901.c:209:6:pmw3901ReadMotion	24	static

@@ -1,0 +1,8 @@
+D:/STM32_AIFRARM/FreeRTOSTest/FreeRTOSTest/modules/inc/quatcompress.h:34:24:quatcompress	48	static
+../modules/src/stabilizer.c:112:13:calcSensorToOutputLatency	24	static
+../modules/src/stabilizer.c:118:13:compressState	32	static
+../modules/src/stabilizer.c:145:13:compressSetpoint	4	static
+../modules/src/stabilizer.c:160:6:stabilizerInit	32	static
+../modules/src/stabilizer.c:184:6:stabilizerTest	16	static
+../modules/src/stabilizer.c:216:13:updateStateEstimatorAndControllerTypes	8	static
+../modules/src/stabilizer.c:254:13:stabilizerTask	32	static

@@ -1,0 +1,4 @@
+../modules/src/worker.c:25:6:workerInit	2
+../modules/src/worker.c:34:6:workerTest	1
+../modules/src/worker.c:39:6:workerLoop	3
+../modules/src/worker.c:55:5:workerSchedule	3

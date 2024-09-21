@@ -1,0 +1,8 @@
+../utils/src/cfassert.c:77:6:assertFail	1
+../utils/src/cfassert.c:93:6:storeAssertFileData	1
+../utils/src/cfassert.c:102:6:storeAssertHardfaultData	1
+../utils/src/cfassert.c:125:6:storeAssertTextData	1
+../utils/src/cfassert.c:133:13:clearAssertData	1
+../utils/src/cfassert.c:137:6:printAssertSnapshotData	1
+../utils/src/cfassert.c:142:13:isAssertRegistered	3
+../utils/src/cfassert.c:146:6:cfAssertNormalStartTest	2

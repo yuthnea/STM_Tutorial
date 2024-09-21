@@ -1,0 +1,7 @@
+../drivers/src/mpu9250.c:15:6:mpu9250TestConnection	2
+../drivers/src/mpu9250.c:23:13:mpu9250EvaluateSelfTest	3
+../drivers/src/mpu9250.c:33:6:mpu9250SelfTest	14
+../drivers/src/mpu9250.c:151:6:mpu9250Init	1
+../drivers/src/mpu9250.c:182:6:mpu9250SetAccelDLPF	1
+../drivers/src/mpu9250.c:186:6:mpu9250GetAccelGyroData	1
+../drivers/src/mpu9250.c:191:6:mpu9250GetMotion6	1

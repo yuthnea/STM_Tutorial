@@ -1,0 +1,4 @@
+../modules/src/estimator/position_estimator_altitude.c:62:6:positionEstimate	1
+../modules/src/estimator/position_estimator_altitude.c:66:6:positionUpdateVelocity	1
+../modules/src/estimator/position_estimator_altitude.c:70:13:positionEstimateInternal	5
+../modules/src/estimator/position_estimator_altitude.c:117:13:positionUpdateVelocityInternal	1

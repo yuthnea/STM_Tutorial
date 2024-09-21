@@ -1,0 +1,9 @@
+../modules/src/system.c:50:6:systemLaunch	1
+../modules/src/system.c:54:6:systemInit	2
+../modules/src/system.c:66:6:systemTest	1
+../modules/src/system.c:73:6:systemTask	5
+../modules/src/system.c:152:6:systemStart	1
+../modules/src/system.c:156:6:systemWaitStart	2
+../modules/src/system.c:166:6:vApplicationIdleHook	2
+../modules/src/system.c:183:10:vApplicationStackOverflowHook	1
+../modules/src/system.c:194:6:vApplicationMallocFailedHook	1

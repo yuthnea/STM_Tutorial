@@ -1,0 +1,9 @@
+../modules/src/estimator/estimator_kalman.c:178:6:estimatorKalmanTaskInit	2
+../modules/src/estimator/estimator_kalman.c:193:6:estimatorKalmanTaskTest	1
+../modules/src/estimator/estimator_kalman.c:197:13:kalmanTask	5
+../modules/src/estimator/estimator_kalman.c:269:6:estimatorKalman	1
+../modules/src/estimator/estimator_kalman.c:281:13:updateQueuedMeasurements	14
+../modules/src/estimator/estimator_kalman.c:350:6:estimatorKalmanInit	1
+../modules/src/estimator/estimator_kalman.c:360:6:estimatorKalmanTest	1
+../modules/src/estimator/estimator_kalman.c:365:6:estimatorKalmanGetEstimatedPos	1
+../modules/src/estimator/estimator_kalman.c:371:6:estimatorKalmanGetEstimatedRot	1

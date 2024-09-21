@@ -1,0 +1,7 @@
+../drivers/src/mpu6500.c:18:6:mpu6500TestConnection	32	static
+../drivers/src/mpu6500.c:29:13:mpu6500EvaluateSelfTest	24	static
+../drivers/src/mpu6500.c:38:6:mpu6500SelfTest	4	static
+../drivers/src/mpu6500.c:41:6:mpu6500Init	32	static
+../drivers/src/mpu6500.c:72:6:mpu6500SetAccelDLPF	32	static
+../drivers/src/mpu6500.c:76:6:mpu6500GetAccelGyroData	32	static
+../drivers/src/mpu6500.c:80:6:mpu6500GetMotion6	56	static

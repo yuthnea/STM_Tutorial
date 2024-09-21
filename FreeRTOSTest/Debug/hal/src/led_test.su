@@ -1,0 +1,2 @@
+../hal/src/led_test.c:27:13:led_task_test	16	static
+../hal/src/led_test.c:37:6:ledblink_test	16	static

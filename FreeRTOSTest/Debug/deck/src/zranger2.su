@@ -1,0 +1,4 @@
+../deck/src/zranger2.c:63:17:zRanger2GetMeasurementAndRestart	56	static
+../deck/src/zranger2.c:86:6:zRanger2Init	16	static
+../deck/src/zranger2.c:102:6:zRanger2Test	4	static
+../deck/src/zranger2.c:110:6:zRanger2Task	32	static

@@ -1,0 +1,10 @@
+../modules/src/estimator/estimator.c:79:6:stateEstimatorInit	1
+../modules/src/estimator/estimator.c:84:6:stateEstimatorSwitchTo	4
+../modules/src/estimator/estimator.c:119:20:stateEstimatorGetType	1
+../modules/src/estimator/estimator.c:123:13:initEstimator	2
+../modules/src/estimator/estimator.c:129:13:deinitEstimator	2
+../modules/src/estimator/estimator.c:135:6:stateEstimatorTest	1
+../modules/src/estimator/estimator.c:139:6:stateEstimator	1
+../modules/src/estimator/estimator.c:143:13:stateEstimatorGetName	1
+../modules/src/estimator/estimator.c:148:6:estimatorEnqueue	4
+../modules/src/estimator/estimator.c:173:6:estimatorDequeue	1

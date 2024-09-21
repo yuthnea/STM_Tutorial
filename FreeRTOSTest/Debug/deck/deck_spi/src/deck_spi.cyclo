@@ -1,0 +1,9 @@
+../deck/deck_spi/src/deck_spi.c:54:6:spiBegin	1
+../deck/deck_spi/src/deck_spi.c:65:13:spiDMAInit	1
+../deck/deck_spi/src/deck_spi.c:78:6:spiTest	1
+../deck/deck_spi/src/deck_spi.c:83:6:spiExchange	3
+../deck/deck_spi/src/deck_spi.c:98:6:spiBeginTransaction	1
+../deck/deck_spi/src/deck_spi.c:103:6:spiEndTransaction	1
+../deck/deck_spi/src/deck_spi.c:108:28:DMA1_Stream0_IRQHandler	2
+../deck/deck_spi/src/deck_spi.c:123:28:DMA1_Stream5_IRQHandler	2
+../deck/deck_spi/src/deck_spi.c:138:6:SPI3_IRQHandler	1

@@ -1,0 +1,15 @@
+../drivers/src/vl53l1x.c:54:6:vl53l1xInit	24	static
+../drivers/src/vl53l1x.c:80:6:vl53l1xTestConnection	120	static
+../drivers/src/vl53l1x.c:95:14:vl53l1xSetI2CAddress	24	static
+../drivers/src/vl53l1x.c:109:14:VL53L1_WriteMulti	48	static
+../drivers/src/vl53l1x.c:125:14:VL53L1_ReadMulti	48	static
+../drivers/src/vl53l1x.c:142:14:VL53L1_WrByte	32	static
+../drivers/src/vl53l1x.c:158:14:VL53L1_WrWord	32	static
+../drivers/src/vl53l1x.c:174:14:VL53L1_WrDWord	40	static
+../drivers/src/vl53l1x.c:190:14:VL53L1_RdByte	40	static
+../drivers/src/vl53l1x.c:208:14:VL53L1_RdWord	40	static
+../drivers/src/vl53l1x.c:226:14:VL53L1_RdDWord	40	static
+../drivers/src/vl53l1x.c:247:14:VL53L1_WaitUs	24	static
+../drivers/src/vl53l1x.c:265:14:VL53L1_WaitMs	16	static
+../drivers/src/vl53l1x.c:278:14:VL53L1_GetTickCount	16	static
+../drivers/src/vl53l1x.c:288:14:VL53L1_WaitValueMaskEx	40	static

@@ -1,0 +1,8 @@
+../utils/src/cfassert.c:77:6:assertFail	32	static,ignoring_inline_asm
+../utils/src/cfassert.c:93:6:storeAssertFileData	16	static
+../utils/src/cfassert.c:102:6:storeAssertHardfaultData	24	static
+../utils/src/cfassert.c:125:6:storeAssertTextData	16	static
+../utils/src/cfassert.c:133:13:clearAssertData	4	static
+../utils/src/cfassert.c:137:6:printAssertSnapshotData	4	static
+../utils/src/cfassert.c:142:13:isAssertRegistered	4	static
+../utils/src/cfassert.c:146:6:cfAssertNormalStartTest	16	static
