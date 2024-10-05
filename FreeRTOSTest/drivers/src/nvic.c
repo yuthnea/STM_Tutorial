@@ -33,6 +33,13 @@
 //#define UART_PRINT    uart1Printf
 
 #include "stdint.h"
+#include "main.h"
+
+extern DMA_HandleTypeDef hdma_tim3_ch1_trig;
+extern DMA_HandleTypeDef hdma_tim3_ch2;
+extern DMA_HandleTypeDef hdma_tim3_ch3;
+extern DMA_HandleTypeDef hdma_tim3_ch4_up;
+extern TIM_HandleTypeDef htim4;
 
 #define DONT_DISCARD __attribute__((used))
 
@@ -202,9 +209,47 @@ void DONT_DISCARD UsageFault_Handler(void)
   {}
 }
 
+
+
 /**
  * @brief  This function handles Debug Monitor exception.
  */
 void DONT_DISCARD DebugMon_Handler(void)
 {
 }
+
+void DMA1_Stream2_IRQHandler(void)
+{
+  HAL_DMA_IRQHandler(&hdma_tim3_ch4_up);
+}
+
+/**
+  * @brief This function handles DMA1 stream4 global interrupt.
+  */
+void DMA1_Stream4_IRQHandler(void)
+{
+  HAL_DMA_IRQHandler(&hdma_tim3_ch1_trig);
+}
+
+/**
+  * @brief This function handles DMA1 stream5 global interrupt.
+  */
+void DMA1_Stream5_IRQHandler(void)
+{
+  HAL_DMA_IRQHandler(&hdma_tim3_ch2);
+}
+
+/**
+  * @brief This function handles DMA1 stream7 global interrupt.
+  */
+void DMA1_Stream7_IRQHandler(void)
+{
+  HAL_DMA_IRQHandler(&hdma_tim3_ch3);
+}
+
+
+void TIM4_IRQHandler(void)
+{
+  HAL_TIM_IRQHandler(&htim4);
+}
+

@@ -20,6 +20,9 @@
 #include "stabilizer.h"
 #include "estimator_kalman.h"
 
+//#include "stm32f4xx_hal_tim.h"
+#include "stm32f4xx_hal.h"
+
 #include "flow.h"
 #include "tof.h"
 #include "zranger2.h"
@@ -28,10 +31,14 @@
 #include "spi_drv.h"
 #include "timer_drv.h"
 #include "uart_drv.h"
+#include "gpio_drv.h"
 
 
 #include "led.h"
 #include "flowdeck.h"
+
+
+#include "dshot.h"
 
 uint32_t counter = 0;
 static uint8_t flage =0;
@@ -80,13 +87,26 @@ void systemTask(void *arg) {
 //		}
 //		vTaskDelay(1);
 //	}
+//	HAL_Init();
+	//JH
+
 	usecTimerInit();
+	GPIO_Init();
+	TIM3_DMA_Init();
+	TIM4_Init();
+	TIM3_Init();
+	hal_dshot_init(DSHOT600);
+	vTaskDelay(10);
+	// JH
+	HAL_TIM_Base_Start_IT(&htim4);
+	//NJH
+
 	I2C1_Init();
 	I2C2_Init();
 
-	SPI2_Init();
-	SPI3_Init();
-	spi1_init();
+//	SPI2_Init();
+//	SPI3_Init();
+//	spi1_init();
 
 //	MX_UART4_Init();
 //	MX_USART1_UART_Init();
@@ -107,6 +127,7 @@ void systemTask(void *arg) {
 	zRanger2Init();
 	//Test LED
 	ledblink_test();
+	motors_test();
 
 //	counter += 1; // JUMP HERE
 //	flowdeck1Init();

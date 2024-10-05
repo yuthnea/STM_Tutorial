@@ -68,6 +68,7 @@
 #define FLOW_TASK_PRI           3
 
 #define LED_TASK_PRI_TEST		3
+#define MOTORS_TASK_PRI_TEST	3
 
 #define MULTIRANGER_TASK_PRI    3
 #define SYSTEM_TASK_PRI         2
@@ -136,6 +137,7 @@
 #define FLOW_TASK_NAME          "FLOW"
 
 #define LED_TASK_NAME			"LED_TEST"
+#define MOTORS_TASK_NAME_TEST	"MOTORS_TEST"
 
 #define USDLOG_TASK_NAME        "USDLOG"
 #define USDWRITE_TASK_NAME      "USDWRITE"
@@ -191,6 +193,7 @@
 #define FLOW_TASK_STACKSIZE           (2 * configMINIMAL_STACK_SIZE)
 
 #define LED_TASK_STACKSIZE			  configMINIMAL_STACK_SIZE
+#define MOTORS_TASK_STACKSIZE_TEST	  (2 * configMINIMAL_STACK_SIZE)
 
 #define USDLOG_TASK_STACKSIZE         (2 * configMINIMAL_STACK_SIZE)
 #define USDWRITE_TASK_STACKSIZE       (3 * configMINIMAL_STACK_SIZE)

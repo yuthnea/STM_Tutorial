@@ -27,7 +27,7 @@ uint32_t counter_led_task = 0;
 static void led_task_test(void *param){
 //	systemWaitStart();
 //	uint64_t lastTime  = usecTimestamp();
-// Open made code belove not work
+// Open made code belowe not work
 
 	while(1){
 		HAL_GPIO_TogglePin(LED_PORT, LED_PIN);

@@ -76,8 +76,8 @@ all: main-build
 main-build: FreeRTOSTest.elf secondary-outputs
 
 # Tool invocations
-FreeRTOSTest.elf FreeRTOSTest.map: $(OBJS) $(USER_OBJS) D:\STM32_AIFRARM\FreeRTOSTest\FreeRTOSTest\STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "FreeRTOSTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\STM32_AIFRARM\FreeRTOSTest\FreeRTOSTest\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FreeRTOSTest.map" -Wl,--gc-sections -static -L"D:\STM32_AIFRARM\FreeRTOSTest\FreeRTOSTest\DSP_DRIVERS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+FreeRTOSTest.elf FreeRTOSTest.map: $(OBJS) $(USER_OBJS) D:\STM32_AIFRARM\STM_Tutorial\FreeRTOSTest\STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "FreeRTOSTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\STM32_AIFRARM\STM_Tutorial\FreeRTOSTest\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FreeRTOSTest.map" -Wl,--gc-sections -static -L"D:\STM32_AIFRARM\STM_Tutorial\FreeRTOSTest\DSP_DRIVERS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,0 +1,12 @@
+../drivers/src/dshot.c:38:6:hal_dshot_init	1
+../drivers/src/dshot.c:45:6:hal_dshot_write	1
+../drivers/src/dshot.c:55:17:dshot_choose_type	3
+../drivers/src/dshot.c:72:13:dshot_set_timer	1
+../drivers/src/dshot.c:99:13:dshot_dma_tc_callback	5
+../drivers/src/dshot.c:121:13:dshot_put_tc_callback_function	1
+../drivers/src/dshot.c:130:13:dshot_start_pwm	1
+../drivers/src/dshot.c:140:17:dshot_prepare_packet	2
+../drivers/src/dshot.c:164:13:dshot_prepare_dmabuffer	3
+../drivers/src/dshot.c:179:13:dshot_prepare_dmabuffer_all	1
+../drivers/src/dshot.c:187:13:dshot_dma_start	1
+../drivers/src/dshot.c:195:13:dshot_enable_dma_request	1

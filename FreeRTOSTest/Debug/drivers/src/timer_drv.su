@@ -1,0 +1,8 @@
+../drivers/src/timer_drv.c:17:6:TIM3_Init	48	static
+../drivers/src/timer_drv.c:74:6:HAL_TIM_PWM_MspInit	24	static
+../drivers/src/timer_drv.c:182:6:HAL_TIM_MspPostInit	40	static
+../drivers/src/timer_drv.c:199:6:HAL_TIM_PWM_MspDeInit	16	static
+../drivers/src/timer_drv.c:216:6:TIM3_DMA_Init	16	static
+../drivers/src/timer_drv.c:238:6:TIM4_Init	32	static
+../drivers/src/timer_drv.c:278:6:HAL_TIM_Base_MspInit	24	static
+../drivers/src/timer_drv.c:292:6:HAL_TIM_Base_MspDeInit	16	static

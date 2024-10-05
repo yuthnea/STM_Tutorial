@@ -32,17 +32,20 @@
 #include "config.h"
 #include "platform.h"
 
+#include "timer_drv.h"
+
 //uint16_t counter = 0;
+uint32_t cournter_timint = 0;
+uint16_t my_motor_values[4] = {0, 0, 0 ,0};
+
 void SystemClock_Config(void);
 
 
 int main( void )
 {
 
-
+//	HAL_Init();
 	SystemClock_Config();
-
-
 
 	int err = platformInit();
 	if (err != 0) {
@@ -52,7 +55,13 @@ int main( void )
 
 	systemLaunch();
 //	counter +=1;
+//	cournter_timint = 1;
+//	HAL_TIM_Base_Start_IT(&htim4);
+//	cournter_timint = 2;
+	//JH
 	vTaskStartScheduler();
+//	cournter_timint = 2;
+	//NJH
 //	counter +=1;
 
     for(;;)
@@ -105,6 +114,18 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 }
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+	if (htim->Instance == TIM4) {
+//		cournter += 1;
+//		  hal_dshot_write(my_motor_values);
+		  cournter_timint += 1;
+//		  HAL_Delay(1);
+	}
+}
+
+
+
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
@@ -115,4 +136,5 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler_Debug */
 }
+
 

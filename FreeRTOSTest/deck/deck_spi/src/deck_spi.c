@@ -65,15 +65,21 @@ void spiBegin(void)
 static void spiDMAInit()
 {
 	/* DMA controller clock enable */
+
+/*
+ * Do nothing
+ *
+ */
+
 	__HAL_RCC_DMA1_CLK_ENABLE();
 
 	/* DMA interrupt init */
 	/* DMA1_Stream0_IRQn interrupt configuration */
-	HAL_NVIC_SetPriority(DMA1_Stream0_IRQn, 5, 0);
-	HAL_NVIC_EnableIRQ(DMA1_Stream0_IRQn);
+//	HAL_NVIC_SetPriority(DMA1_Stream0_IRQn, 5, 0);
+//	HAL_NVIC_EnableIRQ(DMA1_Stream0_IRQn);
 	/* DMA1_Stream5_IRQn interrupt configuration */
-	HAL_NVIC_SetPriority(DMA1_Stream5_IRQn, 0, 0);
-	HAL_NVIC_EnableIRQ(DMA1_Stream5_IRQn);
+//	HAL_NVIC_SetPriority(DMA1_Stream5_IRQn, 0, 0);
+//	HAL_NVIC_EnableIRQ(DMA1_Stream5_IRQn);
 }
 bool spiTest(void)
 {
@@ -105,36 +111,36 @@ void spiEndTransaction()
   xSemaphoreGive(spiMutex);
 }
 
-void __attribute__((used)) DMA1_Stream0_IRQHandler(void)
-{
+//void __attribute__((used)) DMA1_Stream0_IRQHandler(void)
+//{
+//
+//	portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
+//
+//	HAL_DMA_IRQHandler(&hdma_spi3_rx);
+//
+//	xSemaphoreGiveFromISR(rxComplete, &xHigherPriorityTaskWoken);
+////	  flate_t = 1;
+//	if (xHigherPriorityTaskWoken) {
+//		portYIELD();
+//	}
+//
+//}
 
-	portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
-
-	HAL_DMA_IRQHandler(&hdma_spi3_rx);
-
-	xSemaphoreGiveFromISR(rxComplete, &xHigherPriorityTaskWoken);
-//	  flate_t = 1;
-	if (xHigherPriorityTaskWoken) {
-		portYIELD();
-	}
-
-}
-
-void __attribute__((used)) DMA1_Stream5_IRQHandler(void)
-{
-
-	portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
-
-	HAL_DMA_IRQHandler(&hdma_spi3_tx);
-
-	xSemaphoreGiveFromISR(txComplete, &xHigherPriorityTaskWoken);
-//	  flate_t += 1; // JUMP TWO TIME
-	if (xHigherPriorityTaskWoken) {
-		portYIELD();
-	}
-
-
-}
+//void __attribute__((used)) DMA1_Stream5_IRQHandler(void)
+//{
+//
+//	portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
+//
+//	HAL_DMA_IRQHandler(&hdma_spi3_tx);
+//
+//	xSemaphoreGiveFromISR(txComplete, &xHigherPriorityTaskWoken);
+////	  flate_t += 1; // JUMP TWO TIME
+//	if (xHigherPriorityTaskWoken) {
+//		portYIELD();
+//	}
+//
+//
+//}
 void SPI3_IRQHandler(void)
 {
 

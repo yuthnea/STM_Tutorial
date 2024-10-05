@@ -24,6 +24,7 @@
 extern "C" {
 #endif
 
+
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal_def.h"
 
@@ -378,6 +379,7 @@ typedef struct
   void (* BreakCallback)(struct __TIM_HandleTypeDef *htim);                     /*!< TIM Break Callback                                      */
 #endif /* USE_HAL_TIM_REGISTER_CALLBACKS */
 } TIM_HandleTypeDef;
+
 
 #if (USE_HAL_TIM_REGISTER_CALLBACKS == 1)
 /**

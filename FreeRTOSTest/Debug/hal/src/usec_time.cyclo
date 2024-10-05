@@ -1,5 +1,5 @@
-D:/STM32_AIFRARM/FreeRTOSTest/FreeRTOSTest/CMSIS/Include/core_cm4.h:1684:22:__NVIC_EnableIRQ	2
-D:/STM32_AIFRARM/FreeRTOSTest/FreeRTOSTest/CMSIS/Include/core_cm4.h:1814:22:__NVIC_SetPriority	2
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/Include/core_cm4.h:1684:22:__NVIC_EnableIRQ	2
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/Include/core_cm4.h:1814:22:__NVIC_SetPriority	2
 ../hal/src/usec_time.c:37:6:usecTimerInit	2
 ../hal/src/usec_time.c:66:6:usecTimerReset	2
 ../hal/src/usec_time.c:76:10:usecTimestamp	3

@@ -1,4 +1,4 @@
-D:/STM32_AIFRARM/FreeRTOSTest/FreeRTOSTest/modules/inc/quatcompress.h:34:24:quatcompress	48	static
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/quatcompress.h:34:24:quatcompress	48	static
 ../modules/src/stabilizer.c:112:13:calcSensorToOutputLatency	24	static
 ../modules/src/stabilizer.c:118:13:compressState	32	static
 ../modules/src/stabilizer.c:145:13:compressSetpoint	4	static

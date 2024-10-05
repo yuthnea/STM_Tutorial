@@ -26,9 +26,16 @@
 #ifndef NVIC_H_
 #define NVIC_H_
 
+
 /**
  * Setup and initialize the NVIC
  */
 void nvicInit(void);
+
+void TIM4_IRQHandler(void);
+void DMA1_Stream2_IRQHandler(void);
+void DMA1_Stream4_IRQHandler(void);
+void DMA1_Stream5_IRQHandler(void);
+void DMA1_Stream7_IRQHandler(void);
 
 #endif /* NVIC_H_ */
