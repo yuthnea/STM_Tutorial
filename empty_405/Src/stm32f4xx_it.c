@@ -62,6 +62,9 @@ extern DMA_HandleTypeDef hdma_tim3_ch2;
 extern DMA_HandleTypeDef hdma_tim3_ch3;
 extern DMA_HandleTypeDef hdma_tim3_ch4_up;
 extern TIM_HandleTypeDef htim4;
+
+extern DMA_HandleTypeDef hdma_usart1_rx;
+
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -246,4 +249,12 @@ void TIM4_IRQHandler(void)
 
   /* USER CODE END TIM4_IRQn 1 */
 }
+
+void DMA2_Stream2_IRQHandler(void)
+{
+  HAL_DMA_IRQHandler(&hdma_usart1_rx);
+}
+
+
+
 /* USER CODE END 1 */

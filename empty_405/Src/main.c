@@ -1,10 +1,10 @@
 #include "main.h"
 #include "Dshot.h"
-
+#include "dragonll_ibus.h"
 
 uint32_t cournter = 0;
 uint16_t my_motors_values[4] = {0, 0, 0, 0};
-
+uint16_t ibus_data[IBUS_USER_CHANNELS];
 
 
 TIM_HandleTypeDef htim4;
@@ -16,11 +16,17 @@ DMA_HandleTypeDef hdma_tim3_ch4_up;
 
 
 
+UART_HandleTypeDef huart1;
+DMA_HandleTypeDef hdma_usart1_rx;
+
+
+
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void dma_init(void);
 static void MX_TIM4_Init(void);
 static void tim3_init(void);
+static void uart_init(void);
 
 
 int main(void) {
@@ -30,7 +36,11 @@ int main(void) {
 	dma_init();
 	MX_TIM4_Init();
 	tim3_init();
+	uart_init();
+
 	hal_dshot_init(DSHOT600);
+	HAL_Delay(10);
+	hal_ibus_init();
 	HAL_Delay(10);
 	HAL_TIM_Base_Start_IT(&htim4);
 
@@ -108,6 +118,7 @@ static void MX_TIM4_Init(void)
 static void dma_init(void) {
 
 	__HAL_RCC_DMA1_CLK_ENABLE();
+	__HAL_RCC_DMA2_CLK_ENABLE();
 
 	/* DMA interrupt init */
 	/* DMA1_Stream2_IRQn interrupt configuration */
@@ -122,6 +133,10 @@ static void dma_init(void) {
 	/* DMA1_Stream7_IRQn interrupt configuration */
 	HAL_NVIC_SetPriority(DMA1_Stream7_IRQn, 0, 0);
 	HAL_NVIC_EnableIRQ(DMA1_Stream7_IRQn);
+	/* DMA2_Stream2_IRQn interrupt configuration */
+	HAL_NVIC_SetPriority(DMA2_Stream2_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(DMA2_Stream2_IRQn);
+
 }
 
 static void tim3_init(void) {
@@ -165,6 +180,22 @@ static void tim3_init(void) {
 	}
 	HAL_TIM_MspPostInit(&htim3);
 }
+
+static void uart_init(void){
+	  huart1.Instance = USART1;
+	  huart1.Init.BaudRate = 115200;
+	  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+	  huart1.Init.StopBits = UART_STOPBITS_1;
+	  huart1.Init.Parity = UART_PARITY_NONE;
+	  huart1.Init.Mode = UART_MODE_TX_RX;
+	  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+	  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+	  if (HAL_UART_Init(&huart1) != HAL_OK)
+	  {
+	    Error_Handler();
+	  }
+}
+
 static void MX_GPIO_Init(void)
 {
 	  GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -190,8 +221,16 @@ void Error_Handler(void)
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM4) {
-//		cournter +=1;
-		hal_dshot_write(my_motors_values);
+		cournter +=1;
+//		hal_dshot_write(my_motors_values);
+		hal_ibus_read(ibus_data);
+		ibus_soft_failsafe(ibus_data, 10);
+	}
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+	if(huart == IBUS_UART){
+		ibus_reset_failsafe();
 	}
 }
 
