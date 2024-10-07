@@ -39,11 +39,12 @@
 
 
 #include "dshot.h"
+#include "dragonll_ibus.h"
 
 uint32_t counter = 0;
 static uint8_t flage =0;
 static bool isInit;
-
+uint8_t flage_rc = 0;
 
 STATIC_MEM_TASK_ALLOC(systemTask, SYSTEM_TASK_STACKSIZE);
 
@@ -93,11 +94,17 @@ void systemTask(void *arg) {
 	usecTimerInit();
 	GPIO_Init();
 	TIM3_DMA_Init();
+	uart_dma_init();
 	TIM4_Init();
 	TIM3_Init();
+	MX_USART1_UART_Init();
+
 	hal_dshot_init(DSHOT600);
 	vTaskDelay(10);
+	hal_ibus_init();
+//	flage_rc = 1;
 	// JH
+	vTaskDelay(10);
 	HAL_TIM_Base_Start_IT(&htim4);
 	//NJH
 
@@ -128,6 +135,7 @@ void systemTask(void *arg) {
 	//Test LED
 	ledblink_test();
 	motors_test();
+	rc_test();
 
 //	counter += 1; // JUMP HERE
 //	flowdeck1Init();

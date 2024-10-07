@@ -33,10 +33,14 @@
 #include "platform.h"
 
 #include "timer_drv.h"
+#include "uart_drv.h"
+
+#include "dragonll_ibus.h"
 
 //uint16_t counter = 0;
 uint32_t cournter_timint = 0;
 uint16_t my_motor_values[4] = {0, 0, 0 ,0};
+uint16_t ibus_data[IBUS_USER_CHANNELS];
 
 void SystemClock_Config(void);
 
@@ -120,7 +124,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 //		cournter += 1;
 //		  hal_dshot_write(my_motor_values);
 		  cournter_timint += 1;
+		  hal_ibus_read(ibus_data);
+		  ibus_soft_failsafe(ibus_data, 10);
 //		  HAL_Delay(1);
+	}
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+	if(huart == IBUS_UART){
+		ibus_reset_failsafe();
 	}
 }
 

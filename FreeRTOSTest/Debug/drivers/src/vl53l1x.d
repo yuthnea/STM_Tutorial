@@ -46,7 +46,6 @@ drivers/src/vl53l1x.o: ../drivers/src/vl53l1x.c \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim_ex.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_uart.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_usart.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/uart_drv.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/vl53l1x.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/vl53l1/core/inc/vl53l1_ll_def.h \
@@ -114,7 +113,6 @@ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim_ex.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_uart.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_usart.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/uart_drv.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/vl53l1x.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/vl53l1/core/inc/vl53l1_ll_def.h:

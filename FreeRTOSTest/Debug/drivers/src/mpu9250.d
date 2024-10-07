@@ -43,7 +43,6 @@ drivers/src/mpu9250.o: ../drivers/src/mpu9250.c \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim_ex.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_uart.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_usart.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/i2c_drv.h \
  ../Inc/main.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/mpu9250.h
@@ -91,7 +90,6 @@ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim_ex.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_uart.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_usart.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/i2c_drv.h:
 ../Inc/main.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/mpu9250.h:

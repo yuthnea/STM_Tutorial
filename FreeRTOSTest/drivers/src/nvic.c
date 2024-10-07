@@ -41,6 +41,8 @@ extern DMA_HandleTypeDef hdma_tim3_ch3;
 extern DMA_HandleTypeDef hdma_tim3_ch4_up;
 extern TIM_HandleTypeDef htim4;
 
+extern DMA_HandleTypeDef hdma_usart1_rx;
+
 #define DONT_DISCARD __attribute__((used))
 
 void nvicInit(void)
@@ -253,3 +255,7 @@ void TIM4_IRQHandler(void)
   HAL_TIM_IRQHandler(&htim4);
 }
 
+
+void DMA2_Stream2_IRQHandler(void) {
+	HAL_DMA_IRQHandler(&hdma_usart1_rx);
+}

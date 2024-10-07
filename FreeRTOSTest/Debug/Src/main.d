@@ -30,7 +30,6 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim_ex.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_uart.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_usart.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/FreeRTOSConfig.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/config.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/trace.h \
@@ -52,7 +51,10 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/system.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/config.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/platform/inc/platform.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/timer_drv.h
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/timer_drv.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/uart_drv.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dragonll_ibus.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/uart_drv.h
 ../Inc/main.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal.h:
 ../Inc/stm32f4xx_hal_conf.h:
@@ -85,7 +87,6 @@ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim_ex.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_uart.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_usart.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/FreeRTOSConfig.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/config.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/trace.h:
@@ -108,3 +109,6 @@ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/system.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/config.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/platform/inc/platform.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/timer_drv.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/uart_drv.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dragonll_ibus.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/uart_drv.h:

@@ -1,0 +1,2 @@
+../hal/src/rc_test.c:27:13:rc_task_test	16	static
+../hal/src/rc_test.c:37:6:rc_test	16	static

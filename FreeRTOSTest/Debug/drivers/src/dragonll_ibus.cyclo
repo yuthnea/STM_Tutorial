@@ -1,0 +1,7 @@
+../drivers/src/dragonll_ibus.c:18:6:hal_ibus_init	1
+../drivers/src/dragonll_ibus.c:21:6:hal_ibus_read	3
+../drivers/src/dragonll_ibus.c:34:6:ibus_is_valid	3
+../drivers/src/dragonll_ibus.c:38:6:ibus_checksum	2
+../drivers/src/dragonll_ibus.c:49:6:ibus_update	2
+../drivers/src/dragonll_ibus.c:56:6:ibus_soft_failsafe	4
+../drivers/src/dragonll_ibus.c:74:6:ibus_reset_failsafe	1

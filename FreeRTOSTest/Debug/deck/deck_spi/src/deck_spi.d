@@ -31,7 +31,6 @@ deck/deck_spi/src/deck_spi.o: ../deck/deck_spi/src/deck_spi.c \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim_ex.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_uart.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_usart.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/deck/deck_spi/inc/deck_spi.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/config.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/trace.h \
@@ -83,7 +82,6 @@ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim_ex.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_uart.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_usart.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/deck/deck_spi/inc/deck_spi.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/config.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/trace.h:
