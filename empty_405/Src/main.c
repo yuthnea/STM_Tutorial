@@ -3,10 +3,12 @@
 #include "Dshot.h"
 #include "dragonll_ibus.h"
 #include "dragonll_imu6500.h"
+#include "QMC5883P.h"
 
 
 
 MPU6500_IMU imu;
+qmc_typedef qmc;
 
 
 uint32_t cournter = 0;
@@ -19,6 +21,7 @@ uint32_t time_ms = 0;
 
 SPI_HandleTypeDef hspi1;
 
+I2C_HandleTypeDef hi2c2;
 
 TIM_HandleTypeDef htim4;
 TIM_HandleTypeDef htim3;
@@ -41,6 +44,7 @@ static void MX_TIM4_Init(void);
 static void tim3_init(void);
 static void uart_init(void);
 static void spi1_init(void);
+static void i2c2_init(void);
 
 
 int main(void) {
@@ -52,6 +56,7 @@ int main(void) {
 	tim3_init();
 	uart_init();
 	spi1_init();
+	i2c2_init();
 
 	hal_dshot_init(DSHOT600);
 	HAL_Delay(10);
@@ -60,6 +65,8 @@ int main(void) {
 	if(MPU6500_Init(&imu) == 0){
 		while(1);
 	}
+	HAL_Delay(100);
+	qmc5883p_init();
 	HAL_TIM_Base_Start_IT(&htim4);
 
 	/* Loop forever */
@@ -68,8 +75,11 @@ int main(void) {
 //		HAL_Delay(100);
 //		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
 //		HAL_Delay(100);
+
 		MPU6500_ReadAcc(&imu);
 		MPU6500_ReadGyr(&imu);
+		qmc5883p_read(&qmc);
+
 		if(HAL_GetTick() - time_ms < 1000) time_ms = HAL_GetTick();
 	}
 }
@@ -233,6 +243,22 @@ static void spi1_init(void) {
 	if (HAL_SPI_Init(&hspi1) != HAL_OK) {
 		Error_Handler();
 	}
+}
+
+static void i2c2_init(void){
+	  hi2c2.Instance = I2C2;
+	  hi2c2.Init.ClockSpeed = 400000;
+	  hi2c2.Init.DutyCycle = I2C_DUTYCYCLE_2;
+	  hi2c2.Init.OwnAddress1 = 0;
+	  hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+	  hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+	  hi2c2.Init.OwnAddress2 = 0;
+	  hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+	  hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+	  if (HAL_I2C_Init(&hi2c2) != HAL_OK)
+	  {
+	    Error_Handler();
+	  }
 }
 
 
