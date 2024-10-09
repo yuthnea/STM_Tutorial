@@ -40,11 +40,15 @@
 
 #include "dshot.h"
 #include "dragonll_ibus.h"
+#include "dragonll_imu6500.h"
+
+extern MPU6500_IMU imu;
 
 uint32_t counter = 0;
 static uint8_t flage =0;
 static bool isInit;
 uint8_t flage_rc = 0;
+//uint16_t imu_flage = 0;
 
 STATIC_MEM_TASK_ALLOC(systemTask, SYSTEM_TASK_STACKSIZE);
 
@@ -97,6 +101,7 @@ void systemTask(void *arg) {
 	uart_dma_init();
 	TIM4_Init();
 	TIM3_Init();
+	spi1_init();
 	MX_USART1_UART_Init();
 
 	hal_dshot_init(DSHOT600);
@@ -105,6 +110,11 @@ void systemTask(void *arg) {
 //	flage_rc = 1;
 	// JH
 	vTaskDelay(10);
+//	if(MPU6500_Init(&imu) == 0){
+//		imu_flage = 1;
+//		//JH
+//		for(;;);
+//	}
 	HAL_TIM_Base_Start_IT(&htim4);
 	//NJH
 
@@ -136,6 +146,7 @@ void systemTask(void *arg) {
 	ledblink_test();
 	motors_test();
 	rc_test();
+	imu_test();
 
 //	counter += 1; // JUMP HERE
 //	flowdeck1Init();

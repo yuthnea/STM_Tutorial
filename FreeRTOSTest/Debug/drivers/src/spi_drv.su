@@ -1,5 +1,5 @@
 ../drivers/src/spi_drv.c:19:6:spi1_init	8	static
-../drivers/src/spi_drv.c:42:6:SPI2_Init	8	static
-../drivers/src/spi_drv.c:60:6:SPI3_Init	8	static
-../drivers/src/spi_drv.c:81:6:HAL_SPI_MspInit	64	static
-../drivers/src/spi_drv.c:170:6:HAL_SPI_MspDeInit	16	static
+../drivers/src/spi_drv.c:41:6:SPI2_Init	8	static
+../drivers/src/spi_drv.c:59:6:SPI3_Init	8	static
+../drivers/src/spi_drv.c:80:6:HAL_SPI_MspInit	64	static
+../drivers/src/spi_drv.c:169:6:HAL_SPI_MspDeInit	16	static

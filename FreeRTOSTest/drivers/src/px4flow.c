@@ -26,6 +26,7 @@ void px4flowInit(px4flowData_t *flow)
 
 	isInit = true;
 }
+
 bool px4flowTestConnection()
 {
 	if (!isInit){

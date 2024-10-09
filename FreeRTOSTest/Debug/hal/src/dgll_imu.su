@@ -1,0 +1,2 @@
+../hal/src/dgll_imu.c:27:13:imu_task_test	16	static
+../hal/src/dgll_imu.c:44:6:imu_test	16	static

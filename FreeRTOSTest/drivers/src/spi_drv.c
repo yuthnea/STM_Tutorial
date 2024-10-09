@@ -35,7 +35,6 @@ void spi1_init(void)
   {
     Error_Handler();
   }
-
 }
 
 

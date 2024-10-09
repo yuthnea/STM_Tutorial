@@ -5,6 +5,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../hal/src/dgll_imu.c \
 ../hal/src/flow.c \
 ../hal/src/led_test.c \
 ../hal/src/motors_test.c \
@@ -18,6 +19,7 @@ C_SRCS += \
 ../hal/src/usec_time.c 
 
 OBJS += \
+./hal/src/dgll_imu.o \
 ./hal/src/flow.o \
 ./hal/src/led_test.o \
 ./hal/src/motors_test.o \
@@ -31,6 +33,7 @@ OBJS += \
 ./hal/src/usec_time.o 
 
 C_DEPS += \
+./hal/src/dgll_imu.d \
 ./hal/src/flow.d \
 ./hal/src/led_test.d \
 ./hal/src/motors_test.d \
@@ -51,7 +54,7 @@ hal/src/%.o hal/src/%.su hal/src/%.cyclo: ../hal/src/%.c hal/src/subdir.mk
 clean: clean-hal-2f-src
 
 clean-hal-2f-src:
-	-$(RM) ./hal/src/flow.cyclo ./hal/src/flow.d ./hal/src/flow.o ./hal/src/flow.su ./hal/src/led_test.cyclo ./hal/src/led_test.d ./hal/src/led_test.o ./hal/src/led_test.su ./hal/src/motors_test.cyclo ./hal/src/motors_test.d ./hal/src/motors_test.o ./hal/src/motors_test.su ./hal/src/rc_test.cyclo ./hal/src/rc_test.d ./hal/src/rc_test.o ./hal/src/rc_test.su ./hal/src/sensors.cyclo ./hal/src/sensors.d ./hal/src/sensors.o ./hal/src/sensors.su ./hal/src/sensors_flow_tof.cyclo ./hal/src/sensors_flow_tof.d ./hal/src/sensors_flow_tof.o ./hal/src/sensors_flow_tof.su ./hal/src/sensors_mpu6500_bmp280.cyclo ./hal/src/sensors_mpu6500_bmp280.d ./hal/src/sensors_mpu6500_bmp280.o ./hal/src/sensors_mpu6500_bmp280.su ./hal/src/sensors_mpu9250_bmp280.cyclo ./hal/src/sensors_mpu9250_bmp280.d ./hal/src/sensors_mpu9250_bmp280.o ./hal/src/sensors_mpu9250_bmp280.su ./hal/src/sensorsmpu6500_qmc5883.cyclo ./hal/src/sensorsmpu6500_qmc5883.d ./hal/src/sensorsmpu6500_qmc5883.o ./hal/src/sensorsmpu6500_qmc5883.su ./hal/src/tof.cyclo ./hal/src/tof.d ./hal/src/tof.o ./hal/src/tof.su ./hal/src/usec_time.cyclo ./hal/src/usec_time.d ./hal/src/usec_time.o ./hal/src/usec_time.su
+	-$(RM) ./hal/src/dgll_imu.cyclo ./hal/src/dgll_imu.d ./hal/src/dgll_imu.o ./hal/src/dgll_imu.su ./hal/src/flow.cyclo ./hal/src/flow.d ./hal/src/flow.o ./hal/src/flow.su ./hal/src/led_test.cyclo ./hal/src/led_test.d ./hal/src/led_test.o ./hal/src/led_test.su ./hal/src/motors_test.cyclo ./hal/src/motors_test.d ./hal/src/motors_test.o ./hal/src/motors_test.su ./hal/src/rc_test.cyclo ./hal/src/rc_test.d ./hal/src/rc_test.o ./hal/src/rc_test.su ./hal/src/sensors.cyclo ./hal/src/sensors.d ./hal/src/sensors.o ./hal/src/sensors.su ./hal/src/sensors_flow_tof.cyclo ./hal/src/sensors_flow_tof.d ./hal/src/sensors_flow_tof.o ./hal/src/sensors_flow_tof.su ./hal/src/sensors_mpu6500_bmp280.cyclo ./hal/src/sensors_mpu6500_bmp280.d ./hal/src/sensors_mpu6500_bmp280.o ./hal/src/sensors_mpu6500_bmp280.su ./hal/src/sensors_mpu9250_bmp280.cyclo ./hal/src/sensors_mpu9250_bmp280.d ./hal/src/sensors_mpu9250_bmp280.o ./hal/src/sensors_mpu9250_bmp280.su ./hal/src/sensorsmpu6500_qmc5883.cyclo ./hal/src/sensorsmpu6500_qmc5883.d ./hal/src/sensorsmpu6500_qmc5883.o ./hal/src/sensorsmpu6500_qmc5883.su ./hal/src/tof.cyclo ./hal/src/tof.d ./hal/src/tof.o ./hal/src/tof.su ./hal/src/usec_time.cyclo ./hal/src/usec_time.d ./hal/src/usec_time.o ./hal/src/usec_time.su
 
 .PHONY: clean-hal-2f-src
 

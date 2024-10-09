@@ -1,30 +1,6 @@
-modules/src/system.o: ../modules/src/system.c \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/FreeRTOS.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/FreeRTOSConfig.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/config.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/trace.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/usec_time.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/utils/inc/cfassert.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/projdefs.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/portable.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/deprecated_definitions.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/portable/GCC/ARM_CM4F/portmacro.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/mpu_wrappers.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/task.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/list.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/semphr.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/queue.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/task.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/config.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/system.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/platform/inc/platform.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/worker.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/static_mem.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/stabilizer.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/estimator/estimator.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/stabilizer_types.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/imu_types.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/estimator/estimator_kalman.h \
+hal/src/dgll_imu.o: ../hal/src/dgll_imu.c \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/dgll_imu.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dragonll_imu6500.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal.h \
  ../Inc/stm32f4xx_hal_conf.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_rcc.h \
@@ -56,49 +32,31 @@ modules/src/system.o: ../modules/src/system.c \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim_ex.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_uart.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/flow.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/tof.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/deck/inc/zranger2.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/i2c_drv.h \
  ../Inc/main.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/spi_drv.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/timer_drv.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/uart_drv.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/gpio_drv.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/FreeRTOS.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/FreeRTOSConfig.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/config.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/trace.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/usec_time.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/utils/inc/cfassert.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/projdefs.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/portable.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/deprecated_definitions.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/portable/GCC/ARM_CM4F/portmacro.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/mpu_wrappers.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/task.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/list.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/led.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/deck/inc/flowdeck.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dshot.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/timer_drv.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/nvic.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dragonll_ibus.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/uart_drv.h \
- D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dragonll_imu6500.h
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/FreeRTOS.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/FreeRTOSConfig.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/config.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/trace.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/usec_time.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/utils/inc/cfassert.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/projdefs.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/portable.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/deprecated_definitions.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/portable/GCC/ARM_CM4F/portmacro.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/mpu_wrappers.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/task.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/list.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/semphr.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/queue.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/task.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/config.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/system.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/platform/inc/platform.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/worker.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/static_mem.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/stabilizer.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/estimator/estimator.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/stabilizer_types.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/imu_types.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/estimator/estimator_kalman.h:
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/system.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/stabilizer_types.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/imu_types.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/estimator/estimator.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/utils/inc/cf_math.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/DSP_DRIVERS/Include/arm_math.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/Include/cmsis_compiler.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/utils/inc/cfassert.h
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/dgll_imu.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dragonll_imu6500.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal.h:
 ../Inc/stm32f4xx_hal_conf.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_rcc.h:
@@ -130,20 +88,26 @@ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_tim_ex.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/stm32f4xx_hal_driver/Inc/stm32f4xx_hal_uart.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/flow.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/tof.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/deck/inc/zranger2.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/i2c_drv.h:
 ../Inc/main.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/spi_drv.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/timer_drv.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/uart_drv.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/gpio_drv.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/FreeRTOS.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/FreeRTOSConfig.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/config.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/config/trace.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/usec_time.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/utils/inc/cfassert.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/projdefs.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/portable.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/deprecated_definitions.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/portable/GCC/ARM_CM4F/portmacro.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/mpu_wrappers.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/task.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/FreeRTOS/include/list.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/led.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/deck/inc/flowdeck.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dshot.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/timer_drv.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/nvic.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dragonll_ibus.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/uart_drv.h:
-D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dragonll_imu6500.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/system.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/stabilizer_types.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/hal/inc/imu_types.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/modules/inc/estimator/estimator.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/utils/inc/cf_math.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/DSP_DRIVERS/Include/arm_math.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/CMSIS/Include/cmsis_compiler.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/utils/inc/cfassert.h:

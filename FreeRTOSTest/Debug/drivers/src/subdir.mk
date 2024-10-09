@@ -7,6 +7,7 @@
 C_SRCS += \
 ../drivers/src/bmp280.c \
 ../drivers/src/dragonll_ibus.c \
+../drivers/src/dragonll_imu6500.c \
 ../drivers/src/dshot.c \
 ../drivers/src/exti.c \
 ../drivers/src/gpio_drv.c \
@@ -28,6 +29,7 @@ C_SRCS += \
 OBJS += \
 ./drivers/src/bmp280.o \
 ./drivers/src/dragonll_ibus.o \
+./drivers/src/dragonll_imu6500.o \
 ./drivers/src/dshot.o \
 ./drivers/src/exti.o \
 ./drivers/src/gpio_drv.o \
@@ -49,6 +51,7 @@ OBJS += \
 C_DEPS += \
 ./drivers/src/bmp280.d \
 ./drivers/src/dragonll_ibus.d \
+./drivers/src/dragonll_imu6500.d \
 ./drivers/src/dshot.d \
 ./drivers/src/exti.d \
 ./drivers/src/gpio_drv.d \
@@ -75,7 +78,7 @@ drivers/src/%.o drivers/src/%.su drivers/src/%.cyclo: ../drivers/src/%.c drivers
 clean: clean-drivers-2f-src
 
 clean-drivers-2f-src:
-	-$(RM) ./drivers/src/bmp280.cyclo ./drivers/src/bmp280.d ./drivers/src/bmp280.o ./drivers/src/bmp280.su ./drivers/src/dragonll_ibus.cyclo ./drivers/src/dragonll_ibus.d ./drivers/src/dragonll_ibus.o ./drivers/src/dragonll_ibus.su ./drivers/src/dshot.cyclo ./drivers/src/dshot.d ./drivers/src/dshot.o ./drivers/src/dshot.su ./drivers/src/exti.cyclo ./drivers/src/exti.d ./drivers/src/exti.o ./drivers/src/exti.su ./drivers/src/gpio_drv.cyclo ./drivers/src/gpio_drv.d ./drivers/src/gpio_drv.o ./drivers/src/gpio_drv.su ./drivers/src/i2c_drv.cyclo ./drivers/src/i2c_drv.d ./drivers/src/i2c_drv.o ./drivers/src/i2c_drv.su ./drivers/src/i2cdev.cyclo ./drivers/src/i2cdev.d ./drivers/src/i2cdev.o ./drivers/src/i2cdev.su ./drivers/src/led.cyclo ./drivers/src/led.d ./drivers/src/led.o ./drivers/src/led.su ./drivers/src/mpu6500.cyclo ./drivers/src/mpu6500.d ./drivers/src/mpu6500.o ./drivers/src/mpu6500.su ./drivers/src/mpu9250.cyclo ./drivers/src/mpu9250.d ./drivers/src/mpu9250.o ./drivers/src/mpu9250.su ./drivers/src/ms5611.cyclo ./drivers/src/ms5611.d ./drivers/src/ms5611.o ./drivers/src/ms5611.su ./drivers/src/nvic.cyclo ./drivers/src/nvic.d ./drivers/src/nvic.o ./drivers/src/nvic.su ./drivers/src/pmw3901.cyclo ./drivers/src/pmw3901.d ./drivers/src/pmw3901.o ./drivers/src/pmw3901.su ./drivers/src/px4flow.cyclo ./drivers/src/px4flow.d ./drivers/src/px4flow.o ./drivers/src/px4flow.su ./drivers/src/qmc5883p.cyclo ./drivers/src/qmc5883p.d ./drivers/src/qmc5883p.o ./drivers/src/qmc5883p.su ./drivers/src/spi_drv.cyclo ./drivers/src/spi_drv.d ./drivers/src/spi_drv.o ./drivers/src/spi_drv.su ./drivers/src/timer_drv.cyclo ./drivers/src/timer_drv.d ./drivers/src/timer_drv.o ./drivers/src/timer_drv.su ./drivers/src/uart_drv.cyclo ./drivers/src/uart_drv.d ./drivers/src/uart_drv.o ./drivers/src/uart_drv.su ./drivers/src/vl53l1x.cyclo ./drivers/src/vl53l1x.d ./drivers/src/vl53l1x.o ./drivers/src/vl53l1x.su
+	-$(RM) ./drivers/src/bmp280.cyclo ./drivers/src/bmp280.d ./drivers/src/bmp280.o ./drivers/src/bmp280.su ./drivers/src/dragonll_ibus.cyclo ./drivers/src/dragonll_ibus.d ./drivers/src/dragonll_ibus.o ./drivers/src/dragonll_ibus.su ./drivers/src/dragonll_imu6500.cyclo ./drivers/src/dragonll_imu6500.d ./drivers/src/dragonll_imu6500.o ./drivers/src/dragonll_imu6500.su ./drivers/src/dshot.cyclo ./drivers/src/dshot.d ./drivers/src/dshot.o ./drivers/src/dshot.su ./drivers/src/exti.cyclo ./drivers/src/exti.d ./drivers/src/exti.o ./drivers/src/exti.su ./drivers/src/gpio_drv.cyclo ./drivers/src/gpio_drv.d ./drivers/src/gpio_drv.o ./drivers/src/gpio_drv.su ./drivers/src/i2c_drv.cyclo ./drivers/src/i2c_drv.d ./drivers/src/i2c_drv.o ./drivers/src/i2c_drv.su ./drivers/src/i2cdev.cyclo ./drivers/src/i2cdev.d ./drivers/src/i2cdev.o ./drivers/src/i2cdev.su ./drivers/src/led.cyclo ./drivers/src/led.d ./drivers/src/led.o ./drivers/src/led.su ./drivers/src/mpu6500.cyclo ./drivers/src/mpu6500.d ./drivers/src/mpu6500.o ./drivers/src/mpu6500.su ./drivers/src/mpu9250.cyclo ./drivers/src/mpu9250.d ./drivers/src/mpu9250.o ./drivers/src/mpu9250.su ./drivers/src/ms5611.cyclo ./drivers/src/ms5611.d ./drivers/src/ms5611.o ./drivers/src/ms5611.su ./drivers/src/nvic.cyclo ./drivers/src/nvic.d ./drivers/src/nvic.o ./drivers/src/nvic.su ./drivers/src/pmw3901.cyclo ./drivers/src/pmw3901.d ./drivers/src/pmw3901.o ./drivers/src/pmw3901.su ./drivers/src/px4flow.cyclo ./drivers/src/px4flow.d ./drivers/src/px4flow.o ./drivers/src/px4flow.su ./drivers/src/qmc5883p.cyclo ./drivers/src/qmc5883p.d ./drivers/src/qmc5883p.o ./drivers/src/qmc5883p.su ./drivers/src/spi_drv.cyclo ./drivers/src/spi_drv.d ./drivers/src/spi_drv.o ./drivers/src/spi_drv.su ./drivers/src/timer_drv.cyclo ./drivers/src/timer_drv.d ./drivers/src/timer_drv.o ./drivers/src/timer_drv.su ./drivers/src/uart_drv.cyclo ./drivers/src/uart_drv.d ./drivers/src/uart_drv.o ./drivers/src/uart_drv.su ./drivers/src/vl53l1x.cyclo ./drivers/src/vl53l1x.d ./drivers/src/vl53l1x.o ./drivers/src/vl53l1x.su
 
 .PHONY: clean-drivers-2f-src
 

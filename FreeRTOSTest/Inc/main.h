@@ -12,4 +12,9 @@
 
 void Error_Handler(void);
 
+#define GYRO_CS_Pin GPIO_PIN_4
+#define GYRO_CS_GPIO_Port GPIOA
+#define GYRO_INT_Pin GPIO_PIN_4
+#define GYRO_INT_GPIO_Port GPIOC
+
 #endif /* MAIN_H_ */
