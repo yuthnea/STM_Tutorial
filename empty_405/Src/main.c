@@ -1,10 +1,23 @@
 #include "main.h"
+
 #include "Dshot.h"
 #include "dragonll_ibus.h"
+#include "dragonll_imu6500.h"
+
+
+
+MPU6500_IMU imu;
+
 
 uint32_t cournter = 0;
 uint16_t my_motors_values[4] = {0, 0, 0, 0};
 uint16_t ibus_data[IBUS_USER_CHANNELS];
+
+uint32_t time_ms = 0;
+
+
+
+SPI_HandleTypeDef hspi1;
 
 
 TIM_HandleTypeDef htim4;
@@ -27,6 +40,7 @@ static void dma_init(void);
 static void MX_TIM4_Init(void);
 static void tim3_init(void);
 static void uart_init(void);
+static void spi1_init(void);
 
 
 int main(void) {
@@ -37,19 +51,26 @@ int main(void) {
 	MX_TIM4_Init();
 	tim3_init();
 	uart_init();
+	spi1_init();
 
 	hal_dshot_init(DSHOT600);
 	HAL_Delay(10);
 	hal_ibus_init();
 	HAL_Delay(10);
+	if(MPU6500_Init(&imu) == 0){
+		while(1);
+	}
 	HAL_TIM_Base_Start_IT(&htim4);
 
 	/* Loop forever */
 	for (;;) {
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
-		HAL_Delay(100);
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
-		HAL_Delay(100);
+//		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
+//		HAL_Delay(100);
+//		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
+//		HAL_Delay(100);
+		MPU6500_ReadAcc(&imu);
+		MPU6500_ReadGyr(&imu);
+		if(HAL_GetTick() - time_ms < 1000) time_ms = HAL_GetTick();
 	}
 }
 void SystemClock_Config(void)
@@ -196,27 +217,53 @@ static void uart_init(void){
 	  }
 }
 
+static void spi1_init(void) {
+	hspi1.Instance = SPI1;
+	hspi1.Init.Mode = SPI_MODE_MASTER;
+	hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+	hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+	hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+	hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+	hspi1.Init.NSS = SPI_NSS_SOFT;
+	hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+	hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+	hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+	hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+	hspi1.Init.CRCPolynomial = 10;
+	if (HAL_SPI_Init(&hspi1) != HAL_OK) {
+		Error_Handler();
+	}
+}
+
+
 static void MX_GPIO_Init(void)
 {
 	  GPIO_InitTypeDef GPIO_InitStruct = {0};
 	  __HAL_RCC_GPIOC_CLK_ENABLE();
 	  __HAL_RCC_GPIOH_CLK_ENABLE();
+	  __HAL_RCC_GPIOA_CLK_ENABLE();
 
 	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin(GYRO_CS_GPIO_Port, GYRO_CS_Pin, GPIO_PIN_RESET);
+
+	  /*Configure GPIO pin : PC13 */
 	  GPIO_InitStruct.Pin = GPIO_PIN_13;
 	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	  GPIO_InitStruct.Pull = GPIO_NOPULL;
 	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 	  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-}
+	  /*Configure GPIO pin : GYRO_CS_Pin */
+	  GPIO_InitStruct.Pin = GYRO_CS_Pin;
+	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	  HAL_GPIO_Init(GYRO_CS_GPIO_Port, &GPIO_InitStruct);
 
-void Error_Handler(void)
-{
-  __disable_irq();
-  while (1)
-  {
-  }
-
+	  /*Configure GPIO pin : GYRO_INT_Pin */
+	  GPIO_InitStruct.Pin = GYRO_INT_Pin;
+	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  HAL_GPIO_Init(GYRO_INT_GPIO_Port, &GPIO_InitStruct);
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
@@ -232,6 +279,15 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 	if(huart == IBUS_UART){
 		ibus_reset_failsafe();
 	}
+}
+
+void Error_Handler(void)
+{
+  __disable_irq();
+  while (1)
+  {
+  }
+
 }
 
 #ifdef  USE_FULL_ASSERT
