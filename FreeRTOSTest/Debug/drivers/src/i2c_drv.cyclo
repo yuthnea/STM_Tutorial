@@ -1,4 +1,4 @@
-../drivers/src/i2c_drv.c:12:6:I2C1_Init	2
-../drivers/src/i2c_drv.c:29:6:I2C2_Init	2
-../drivers/src/i2c_drv.c:47:6:HAL_I2C_MspInit	3
-../drivers/src/i2c_drv.c:77:6:HAL_I2C_MspDeInit	3
+../drivers/src/i2c_drv.c:13:6:I2C1_Init	2
+../drivers/src/i2c_drv.c:30:6:I2C2_Init	2
+../drivers/src/i2c_drv.c:48:6:HAL_I2C_MspInit	3
+../drivers/src/i2c_drv.c:78:6:HAL_I2C_MspDeInit	3

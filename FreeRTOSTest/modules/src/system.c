@@ -102,6 +102,7 @@ void systemTask(void *arg) {
 	TIM4_Init();
 	TIM3_Init();
 	spi1_init();
+	I2C2_Init();
 	MX_USART1_UART_Init();
 
 	hal_dshot_init(DSHOT600);
@@ -118,8 +119,8 @@ void systemTask(void *arg) {
 	HAL_TIM_Base_Start_IT(&htim4);
 	//NJH
 
-	I2C1_Init();
-	I2C2_Init();
+//	I2C1_Init();
+//	I2C2_Init();
 
 //	SPI2_Init();
 //	SPI3_Init();
@@ -147,6 +148,7 @@ void systemTask(void *arg) {
 	motors_test();
 	rc_test();
 	imu_test();
+	qmc_test();
 
 //	counter += 1; // JUMP HERE
 //	flowdeck1Init();

@@ -129,6 +129,7 @@
 "./drivers/src/uart_drv.o"
 "./drivers/src/vl53l1x.o"
 "./hal/src/dgll_imu.o"
+"./hal/src/dgll_qmc.o"
 "./hal/src/flow.o"
 "./hal/src/led_test.o"
 "./hal/src/motors_test.o"

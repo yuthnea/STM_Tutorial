@@ -1,0 +1,4 @@
+../drivers/src/qmc5883p.c:15:13:qmc5883p_Write_Reg	40	static
+../drivers/src/qmc5883p.c:20:13:qmc5883p_Read_Reg	32	static
+../drivers/src/qmc5883p.c:25:9:qmc5883p_init	16	static
+../drivers/src/qmc5883p.c:53:9:qmc5883p_read	24	static

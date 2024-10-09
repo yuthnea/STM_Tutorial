@@ -1,0 +1,2 @@
+../hal/src/dgll_qmc.c:26:13:qmc_task_test	16	static
+../hal/src/dgll_qmc.c:37:6:qmc_test	16	static

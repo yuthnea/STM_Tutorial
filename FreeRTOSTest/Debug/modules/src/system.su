@@ -2,8 +2,8 @@
 ../modules/src/system.c:66:6:systemInit	8	static
 ../modules/src/system.c:78:6:systemTest	16	static
 ../modules/src/system.c:85:6:systemTask	24	static
-../modules/src/system.c:192:6:systemStart	8	static
-../modules/src/system.c:196:6:systemWaitStart	8	static
-../modules/src/system.c:206:6:vApplicationIdleHook	16	static
-../modules/src/system.c:223:10:vApplicationStackOverflowHook	16	static
-../modules/src/system.c:234:6:vApplicationMallocFailedHook	4	static
+../modules/src/system.c:194:6:systemStart	8	static
+../modules/src/system.c:198:6:systemWaitStart	8	static
+../modules/src/system.c:208:6:vApplicationIdleHook	16	static
+../modules/src/system.c:225:10:vApplicationStackOverflowHook	16	static
+../modules/src/system.c:236:6:vApplicationMallocFailedHook	4	static

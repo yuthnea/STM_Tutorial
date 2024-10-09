@@ -22,13 +22,13 @@
 
 MPU6500_IMU imu;
 
-uint16_t imu_flage = 0;
+//uint16_t imu_flage = 0;
 
 static void imu_task_test(void *param){
 //	imu_flage = 1;
 	//JH
 	if(MPU6500_Init(&imu) == 0){
-		imu_flage = 1;
+//		imu_flage = 1;
 		//NJH
 		for(;;);
 	}
