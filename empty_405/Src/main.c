@@ -4,11 +4,28 @@
 #include "dragonll_ibus.h"
 #include "dragonll_imu6500.h"
 #include "QMC5883P.h"
+#include "MadgwickAHRS.h"
 
 
+typedef struct {
+	float gyro_x;
+	float gyro_y;
+	float gyro_z;
+	float acc_x;
+	float acc_y;
+	float acc_z;
+} Scale_senor;
+
+typedef struct{
+	float roll;
+	float pitch;
+	float yaw;
+}angle_;
 
 MPU6500_IMU imu;
 qmc_typedef qmc;
+Scale_senor scale_;
+angle_ angle__;
 
 
 uint32_t cournter = 0;
@@ -25,6 +42,7 @@ I2C_HandleTypeDef hi2c2;
 
 TIM_HandleTypeDef htim4;
 TIM_HandleTypeDef htim3;
+TIM_HandleTypeDef htim14;
 DMA_HandleTypeDef hdma_tim3_ch1_trig;
 DMA_HandleTypeDef hdma_tim3_ch2;
 DMA_HandleTypeDef hdma_tim3_ch3;
@@ -42,6 +60,7 @@ static void MX_GPIO_Init(void);
 static void dma_init(void);
 static void MX_TIM4_Init(void);
 static void tim3_init(void);
+static void tim14_init(void);
 static void uart_init(void);
 static void spi1_init(void);
 static void i2c2_init(void);
@@ -54,6 +73,7 @@ int main(void) {
 	dma_init();
 	MX_TIM4_Init();
 	tim3_init();
+	tim14_init();
 	uart_init();
 	spi1_init();
 	i2c2_init();
@@ -67,6 +87,7 @@ int main(void) {
 	}
 	HAL_Delay(100);
 	qmc5883p_init();
+	HAL_TIM_Base_Start(&htim14);
 	HAL_TIM_Base_Start_IT(&htim4);
 
 	/* Loop forever */
@@ -79,8 +100,26 @@ int main(void) {
 		MPU6500_ReadAcc(&imu);
 		MPU6500_ReadGyr(&imu);
 		qmc5883p_read(&qmc);
+		/*
+		 * Scale for IMU
+		 */
+		scale_.acc_x = imu.acc[0] * 0.00239501953125f;
+		scale_.acc_y = imu.acc[1] * 0.00239501953125f;
+		scale_.acc_z = imu.acc[2] * 0.00239501953125f;
 
-		if(HAL_GetTick() - time_ms < 1000) time_ms = HAL_GetTick();
+		scale_.gyro_x = imu.gyr[0] * 0.00026632423f;
+		scale_.gyro_y = imu.gyr[1] * 0.00026632423f;
+		scale_.gyro_z = imu.gyr[2] * 0.00026632423f;
+
+		MadgwickAHRSupdate(scale_.gyro_x, scale_.gyro_y, scale_.gyro_z,
+				scale_.acc_x, scale_.acc_y, scale_.acc_y,
+				qmc.qmc_x, qmc.qmc_y,qmc.qmc_z);
+		angle__.roll = asin(2 * ((q0 * q2) - (q1 * q3)))* 57.29577951f;
+		angle__.pitch = -atan2( 2 * ( (q0 * q1) + (q2 * q3)), 1 - (2 * ((q1 * q1) + (q2 * q2)))) * 57.29577951f; //degrees
+		angle__.yaw = atan2(2 * ((q0 * q3) + (q1 * q2)), 1 - (2 * ((q2 * q2) + (q3 * q3)))) * 57.29577951f; //degrees
+//		if (HAL_GetTick() - time_ms < 1000) time_ms = HAL_GetTick();
+		while(__HAL_TIM_GET_COUNTER(&htim14) - time_ms < 250);
+		time_ms = __HAL_TIM_GET_COUNTER(&htim14);
 	}
 }
 void SystemClock_Config(void)
@@ -210,6 +249,19 @@ static void tim3_init(void) {
 		Error_Handler();
 	}
 	HAL_TIM_MspPostInit(&htim3);
+}
+
+static void tim14_init(void){
+	  htim14.Instance = TIM14;
+	  htim14.Init.Prescaler = 84-1;
+	  htim14.Init.CounterMode = TIM_COUNTERMODE_UP;
+	  htim14.Init.Period = 65535-1;
+	  htim14.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+	  htim14.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+	  if (HAL_TIM_Base_Init(&htim14) != HAL_OK)
+	  {
+	    Error_Handler();
+	  }
 }
 
 static void uart_init(void){

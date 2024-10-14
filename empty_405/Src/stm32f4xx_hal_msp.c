@@ -326,15 +326,15 @@ void HAL_TIM_PWM_MspDeInit(TIM_HandleTypeDef* htim_pwm)
  * Timer4 Global interrupt
  */
 
-void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
-{
-  if(htim_base->Instance==TIM4)
-  {
-    __HAL_RCC_TIM4_CLK_ENABLE();
-    HAL_NVIC_SetPriority(TIM4_IRQn, 0, 0);
-    HAL_NVIC_EnableIRQ(TIM4_IRQn);
+void HAL_TIM_Base_MspInit(TIM_HandleTypeDef *htim_base) {
+	if (htim_base->Instance == TIM4) {
+		__HAL_RCC_TIM4_CLK_ENABLE();
+		HAL_NVIC_SetPriority(TIM4_IRQn, 0, 0);
+		HAL_NVIC_EnableIRQ(TIM4_IRQn);
 
-  }
+	} else if (htim_base->Instance == TIM14) {
+		__HAL_RCC_TIM14_CLK_ENABLE();
+	}
 
 }
 
@@ -344,8 +344,10 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
   {
     __HAL_RCC_TIM4_CLK_DISABLE();
     HAL_NVIC_DisableIRQ(TIM4_IRQn);
-
   }
+  else if (htim_base->Instance == TIM14) {
+	  __HAL_RCC_TIM14_CLK_DISABLE();
+}
 
 }
 /**
