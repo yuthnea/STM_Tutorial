@@ -9,6 +9,7 @@
 #define INC_DGLL_QMC_H_
 #include "qmc5883p.h"
 
+//extern qmc_typedef qmc;
 
 void qmc_test();
 

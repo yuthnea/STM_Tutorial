@@ -40,6 +40,8 @@ typedef struct {
 
 } MPU6500_IMU;
 
+extern MPU6500_IMU imu;
+
 uint8_t MPU6500_Init(MPU6500_IMU *imu);
 
 void MPU6500_ReadAcc(MPU6500_IMU *imu);

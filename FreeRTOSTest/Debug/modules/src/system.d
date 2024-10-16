@@ -70,6 +70,7 @@ modules/src/system.o: ../modules/src/system.c \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dshot.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/timer_drv.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/nvic.h \
+ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/MadgwickAHRS.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dragonll_ibus.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/uart_drv.h \
  D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dragonll_imu6500.h
@@ -144,6 +145,7 @@ D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/deck/inc/flowdeck.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dshot.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/timer_drv.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/nvic.h:
+D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/MadgwickAHRS.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dragonll_ibus.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/uart_drv.h:
 D:/STM32_AIFRARM/STM_Tutorial/FreeRTOSTest/drivers/inc/dragonll_imu6500.h:

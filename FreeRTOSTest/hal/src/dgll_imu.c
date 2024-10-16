@@ -37,7 +37,7 @@ static void imu_task_test(void *param){
 	for(;;){
 		MPU6500_ReadAcc(&imu);
 		MPU6500_ReadGyr(&imu);
-		vTaskDelay(10);
+		vTaskDelay(1);
 	}
 }
 

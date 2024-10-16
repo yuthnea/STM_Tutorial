@@ -33,18 +33,25 @@ uint8_t qmc5883p_init(){
 
 	qmc5883p_Write_Reg(0x29, 0x06);
 //	HAL_Delay(5);
+//	vTaskDelay(5);
 	sleepus(5000);
 	qmc5883p_Write_Reg(Q5883P_CONTR_2, 0x40);
 //	HAL_Delay(5);
-	sleepus(50000);
+	sleepus(5000);
+//	vTaskDelay(5);
+
 
 	qmc5883p_Write_Reg(Q5883P_CONTR_2, set_range);
 //	HAL_Delay(5);
 	sleepus(5000);
+//	vTaskDelay(5);
+
 
 	qmc5883p_Write_Reg(Q5883P_CONTR_1, set_osr);
 //	HAL_Delay(5);
 	sleepus(5000);
+//	vTaskDelay(5);
+
 
 
 	return 1;

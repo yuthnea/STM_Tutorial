@@ -29,7 +29,7 @@ static void qmc_task_test(void *param){
 
 	for(;;){
 		qmc5883p_read(&qmc);
-		vTaskDelay(10);
+		vTaskDelay(1);
 //		qmc_flage = 1;
 	}
 }

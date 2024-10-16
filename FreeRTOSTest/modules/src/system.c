@@ -39,6 +39,8 @@
 
 
 #include "dshot.h"
+#include "MadgwickAHRS.h"
+
 #include "dragonll_ibus.h"
 #include "dragonll_imu6500.h"
 
@@ -149,6 +151,7 @@ void systemTask(void *arg) {
 	rc_test();
 	imu_test();
 	qmc_test();
+	attitude_test();
 
 //	counter += 1; // JUMP HERE
 //	flowdeck1Init();

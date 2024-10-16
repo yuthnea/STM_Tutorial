@@ -1,0 +1,7 @@
+../drivers/src/MadgwickAHRS.c:50:7:sin_approx	24	static
+../drivers/src/MadgwickAHRS.c:61:7:cos_approx	16	static
+../drivers/src/MadgwickAHRS.c:65:7:atan2_approx	48	static
+../drivers/src/MadgwickAHRS.c:87:7:acos_approx	24	static
+../drivers/src/MadgwickAHRS.c:96:6:MadgwickAHRSupdate	192	static
+../drivers/src/MadgwickAHRS.c:229:6:MadgwickAHRSupdateIMU	120	static
+../drivers/src/MadgwickAHRS.c:303:7:invSqrt	32	static
